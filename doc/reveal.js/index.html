@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+    <!-- <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"
+      integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+      crossorigin="anonymous"
+    ></script> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <style>
+      span + span {
+        margin-left: 80px;
+      }
+      header {
+        text-align: center;
+        margin: auto;
+        width: 80%;
+        padding: 10px;
+      }
+      footer {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+      footer > * {
+        margin: 0 10px;
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <header>
+        Programar un videojuego en Python -- Alejandro Almira
+      </header>
+      <div class="slides">
+        <section>
+          <h1>Programar un videojuego en Python</h1>
+          <span style="font-size: 8rem;">
+            <i class="fab fa-python"></i>
+            <i class="fas fa-heart" style="color: red"></i>
+            <i class="fas fa-gamepad"></i>
+          </span>
+        </section>
+        <section>
+          <section>
+            <div>
+              ¿Quien soy yo?
+            </div>
+            <div>
+              <span>
+                <ul>
+                  <li>Alejandro Almira</li>
+                  <li>Ingeniero Informático por la Universidad de Alicante</li>
+                  <li>Apasionado por el Software Libre</li>
+                  <li>
+                    Estudio YOBO
+                    <ul>
+                      <li>
+                        <i class="fas fa-envelope"></i>
+                        alejandro@estudioyobo.com
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Python Alicante
+                    <ul>
+                      <li>
+                        <i class="fas fa-envelope"></i>
+                        pyalicante@gmail.com
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- <li>Contacto:</li>
+                  <ul>
+                    <li>
+                      <i class="fas fa-envelope"></i> aalmiramolla@gmail.com
+                    </li>
+                  </ul> -->
+                </ul>
+              </span>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>¡Python Alicante!</h2>
+            <img height="50%" src="./assets/logo.png" />
+          </section>
+          <section>
+            <h2>¡Python Alicante!</h2>
+            <img height="50%" src="./assets/zuri.png" />
+          </section>
+          <section>
+            <img height="400px" src="./assets/logo_pycones.png" />
+            <h2>https://2019.es.pycon.org/</h2>
+          </section>
+          <section>
+            <h2>MeetUps, Talleres, Charlas...</h2>
+          </section>
+          <section>
+            <h2>Comunidad</h2>
+            <img height="400px" src="./assets/collage_meetup.png" />
+          </section>
+        </section>
+        <section>
+          <section>
+            ¿Qué vamos a hacer?
+            <aside class="notes">
+              Bueno, pasamos al taller ya, Que es lo que vamos a hacer?
+            </aside>
+          </section>
+          <section>
+            <img src="./assets/snake2.jpg" alt="snake" />
+            <aside class="notes">
+              Vamos a hacer el snake!! Pero...
+            </aside>
+          </section>
+          <!-- <section>
+            <img src="./assets/mario.png" alt="snake" />
+            <aside class="notes">
+              Oh hey, these are some notes. They'll be hidden in your
+              presentation, but you can see them if you open the speaker notes
+              window (hit »S« on your keyboard).
+            </aside>
+          </section> -->
+        </section>
+        <section>
+          <section>
+            ¿Cómo lo vamos a hacer?
+            <aside class="notes">
+              Como lo vamos a hacer???
+            </aside>
+          </section>
+          <section>
+            <img src="./assets/pygame.png" alt="snake" />
+          </section>
+          <section>
+            <ul>
+              <li>Documentación - https://www.pygame.org/docs/</li>
+              <li>Tutoriales - https://www.pygame.org/wiki/tutorials</li>
+              <li>Ejemplos - https://www.pygame.org/tags/all</li>
+            </ul>
+          </section>
+          <section>
+            ¿Python y juegos?
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>¡¡VAMOS A ELLO!!</h1>
+          </section>
+          <section>
+            Instalación
+            <pre>
+                <code class="bash" data-trim data-noescape>
+                  pip install --user pipenv
+                  mkdir retrogame
+                  cd retrogame
+                  pipenv install pygame
+                </code>
+              </pre>
+          </section>
+          <section>
+            <h1>Ventanas</h1>
+          </section>
+          <section>
+            <h1>Sprite</h1>
+          </section>
+          <section>
+            <h1>Sprite Avanzado</h1>
+          </section>
+          <section>
+            <h1>Sprite con movimiento</h1>
+          </section>
+          <section>
+            <h1>Colisiones</h1>
+          </section>
+          <section>
+            <h1>Score</h1>
+          </section>
+          <section>
+            <h1>Sonidos</h1>
+          </section>
+        </section>
+        <section>
+          <h1>Recursos</h1>
+          <ul>
+            <li>http://kidscancode.org/lessons/</li>
+            <li>https://opengameart.org/</li>
+            <li>https://www.pygame.org/wiki/tutorials</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Muchas gracias</h1>
+        </section>
+        <section>
+          <h3>Contacto</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> alejandro@estudioyobo.com</li>
+            <li><i class="fas fa-envelope"></i> pyalicante@gmail.com</li>
+            <li><i class="fab fa-twitter"> @python_alc</i></li>
+            <li><i class="fab fa-telegram"> @python_alc</i></li>
+          </ul>
+        </section>
+      </div>
+      <footer>
+        <img height="60rem" src="./assets/logo.png" />
+        <i class="fab fa-twitter">@python_alc</i>
+        <i class="fab fa-telegram">@python_alc</i>
+
+        Colabora: <img height="60rem" src="./assets/deeps.png" /><img
+          height="60rem"
+          src="./assets/yobo.svg"
+        />
+      </footer>
+    </div>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
